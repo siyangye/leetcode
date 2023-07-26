@@ -14,20 +14,14 @@
 11. Trie
 12. N-ary tree
 
-Phase 1 DSA topics:
-Arrays
-Strings
-Matrix
-Maths
-Stack
-Queue
-Recursion
-Searching and Sorting
-Linked List
-Binary Trees and Binary Search Trees
-Asymptotic analysis (Big-O notation)
+<br>leetcode card layers|leetcode官方顺序建议：
+1. First and Second Layers: Arrays 101, Linked List, Array and String, Hash Table, Recursion, Queue & Stack, Heap, and Binary Search
+
+2. Second and Third Layers: Recursion, Binary Tree, Binary Search Tree, Trie, N-ary Tree, and Recursion II
+
+3. Third and Fourth Layers: Recursion II, Dynamic Programming, and Graph
 <br></br>
 <h2>References:</h2>
-Mosh for DSA & Java basics, geeks for geek
-论坛: https://leetcode.com/discuss/study-guide/2009997/How-to-get-started-with-DSA-and-practice-Leetcode-Efficiently
-论坛： https://leetcode.com/discuss/general-discussion/494279/comprehensive-data-structure-and-algorithm-study-guide
+<br> Tutorials: Mosh for DSA & Java basics, geeks for geek, hackrank
+<br>论坛: https://leetcode.com/discuss/study-guide/2009997/How-to-get-started-with-DSA-and-practice-Leetcode-Efficiently
+<br>论坛： https://leetcode.com/discuss/general-discussion/494279/comprehensive-data-structure-and-algorithm-study-guide

@@ -13,3 +13,21 @@
 10. Binary Search Tree
 11. Trie
 12. N-ary tree
+
+Phase 1 DSA topics:
+Arrays
+Strings
+Matrix
+Maths
+Stack
+Queue
+Recursion
+Searching and Sorting
+Linked List
+Binary Trees and Binary Search Trees
+Asymptotic analysis (Big-O notation)
+<br></br>
+<h2>References:</h2>
+Mosh for DSA & Java basics, geeks for geek
+论坛: https://leetcode.com/discuss/study-guide/2009997/How-to-get-started-with-DSA-and-practice-Leetcode-Efficiently
+论坛： https://leetcode.com/discuss/general-discussion/494279/comprehensive-data-structure-and-algorithm-study-guide

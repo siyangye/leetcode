@@ -1,6 +1,7 @@
 class Solution{
     public ListNode mergeTwoLists(ListNode l1, ListNode l2){
-        ListNode newNode = new ListNode(0);
+        ListNode newNode = new ListNode(0); //create an empty linkedlist;
+        //compare the data, smaller ones get into empty linkedlist:
         while (l1!= null && l2 != null){
             if(l1.val < l2.val){
                 newNode.next = l1;
@@ -16,7 +17,6 @@ class Solution{
             newNode.next = l1;
         }
         //* if l1 is not null, l2 is null, rest of the l2 goes to newNode */
-        //test
         while(l1 == null && l2 != null){
             newNode.next = l2;
         }

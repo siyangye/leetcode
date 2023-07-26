@@ -11,11 +11,14 @@ class Solution{
                 l2 = l2.next;
             }
         }
-        if (l1!= null){
-            current.next = l1;
+        //* if l1 is not null, l2 is null, rest of the l2 goes to newNode */
+        while (l1!= null && l2 == null){
+            newNode.next = l1;
         }
-        else{
-            current.next = l2;
+        //* if l1 is not null, l2 is null, rest of the l2 goes to newNode */
+        //test
+        while(l1 == null && l2 != null){
+            newNode.next = l2;
         }
         return newNode.next;
         }   

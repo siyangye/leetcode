@@ -1,0 +1,2 @@
+1. 不用array存储，而是用更新ariable的方法留下需要的数字
+2. Edge cases要考虑，for loop 循环到最后一个的情况

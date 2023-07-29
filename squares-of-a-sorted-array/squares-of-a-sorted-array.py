@@ -20,28 +20,28 @@ class Solution(object):
         
         return sort[::-1] #reverse
              
-#     #method 2: list it one by one 
-        sort = []
-        for num in nums:
-            k = num **2 
+# #     #method 2: list it one by one 
+#         sort = []
+#         for num in nums:
+#             k = num **2 
             
-            i = 0
-            if not sort or sort[-1] <= k:
-                sort.append(k)
-            else:
-                sort.append(0) #append first
-                while i < len(sort) and sort[i] <= k:
-                    i = i+1
-                #when: sort[i] >k, break the while loop 
-                # move the latter list forward, but you have to do it backwards, or it will get overwrite. 
-                j = len(sort) -1
-                while j > i:
-                    sort[j] = sort[j-1]
-                    j = j-1
-                sort[i] = k
+#             i = 0
+#             if not sort or sort[-1] <= k:
+#                 sort.append(k)
+#             else:
+#                 sort.append(0) #append first
+#                 while i < len(sort) and sort[i] <= k:
+#                     i = i+1
+#                 #when: sort[i] >k, break the while loop 
+#                 # move the latter list forward, but you have to do it backwards, or it will get overwrite. 
+#                 j = len(sort) -1
+#                 while j > i:
+#                     sort[j] = sort[j-1]
+#                     j = j-1
+#                 sort[i] = k
             
 
-        return sort 
+#         return sort 
         
 #         sorted = []
 

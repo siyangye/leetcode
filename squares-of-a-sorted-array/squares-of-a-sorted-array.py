@@ -20,7 +20,7 @@ class Solution(object):
         
         return sort[::-1] #reverse
              
-# #     #method 2: list it one by one 
+# #     #method 2: list it one by one - time exceed
 #         sort = []
 #         for num in nums:
 #             k = num **2 
@@ -43,6 +43,7 @@ class Solution(object):
 
 #         return sort 
         
+    #method3: 
 #         sorted = []
 
 #         for num in nums:

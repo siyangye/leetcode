@@ -1,4 +1,5 @@
 **"Aything worth doing can be done."**
+<br>刷题记录 https://docs.google.com/spreadsheets/d/1I99wGsv3u24MiS8htGFiR03_v4_Gjkb_D-_sdE4bll0/edit?usp=sharing <br>
 <br>Link: https://leetcode.com/explore/learn/ </br>
 <br>刷题顺序：
 1. Array and strings

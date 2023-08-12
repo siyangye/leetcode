@@ -3,6 +3,7 @@ class Solution:
         leftSum = 0 
         total = sum(nums)
         for i in range(len(nums)):
+            #key: function of rightSum 
             rightSum = total - leftSum - nums[i]
             if rightSum == leftSum:
                 return i 

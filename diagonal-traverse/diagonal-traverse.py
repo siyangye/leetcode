@@ -5,8 +5,8 @@ class Solution:
         #create a 2d list to stroe all elements:
         for i in range(num_rows):
             for j in range(num_cols):
-                #难点:
-                diagonals[i+j].append(matrix[i][j])
+                #难点: 每个element分别append到对应的rows[i+j]中
+                diagonals[i+j].append(matrix[i][j]) 
         #convert the 2d list into diagonal sequence
         res = diagonals[0] #store the first row 
         for p in range(1,len(diagonals)): #reverse the rest of the rows

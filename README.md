@@ -1,6 +1,7 @@
 <h1>Grind 75 习题集 & learning roadmap:</h1>
 [https://www.techinterviewhandbook.org/coding-interview-study-plan/] 
-![Screenshot from 2023-08-23 16-17-48](https://github.com/siyangye/leetcode/assets/50527023/596c3e2a-f1c4-480b-a1f2-84b6f5536033)
+![Screenshot from 2023-08-23 16-17-48](https://github.com/siyangye/leetcode/assets/50527023/dd838514-b5b3-4855-8bb5-5096eb0e3397) 
+
 
 ![Screenshot from 2023-08-23 16-18-04](https://github.com/siyangye/leetcode/assets/50527023/e010e5a2-c901-4af9-b9a3-bca030868d57)
 

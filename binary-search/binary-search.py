@@ -8,7 +8,7 @@ class Solution:
             if nums[mid] == target:
                 return mid
             elif target > nums[mid]:
-                l = mid + 1 
+                l = mid + 1
             elif target < nums[mid]:
                 r = mid - 1 
             mid = (l+r)//2

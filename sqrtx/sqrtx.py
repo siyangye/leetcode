@@ -10,11 +10,11 @@ class Solution:
                 r = mid - 1
             elif mid **2 < x:
                 l = mid + 1 
-                res = mid
+                res = mid #难点在这里，round down to the closest squared int. 
             elif mid ** 2 == x:
-                return mid
+                return mid 
                 
-        return res
+        return res #return squared result here. 
                 
         
         

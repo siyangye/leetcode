@@ -1,0 +1,26 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def insertionSortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode(0, head)
+        pointer = head # the node that is being sorted 
+        curr = head.next # the next node that needs to be sorted
+        while curr: #if none 
+            if pointer.val <= curr.val:
+                #pointer -> cur 
+                pointer = pointer.next
+                curr = curr.next 
+            else:
+                #update the next unsorted node before the LL updated
+                pointer.next = curr.next
+                pos = dummy #insertion pointer
+                while pos.next.val < curr.val:
+                    pos = pos.next #update pointer
+                #make insertion: pos ->curr -> pos.next
+                curr.next = pos.next 
+                pos.next = curr
+                curr = pointer.next #update current location
+        return dummy.next #return updated head

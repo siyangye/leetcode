@@ -25,14 +25,14 @@ def count_long_subarray(A):
                 count = 1
             elif max_len == curr_len:
                 count += 1
-            else:
-                break
+            #else:
+                #break
             curr_len = 1 #update the curr_len,last curr_len didn't get compared. 
     # final check: the last subarray if it is a max:
     if max_len == curr_len:
         count += 1 
     elif curr_len > max_len:
-        count == 1 
+        count = 1 
 
     return count
 

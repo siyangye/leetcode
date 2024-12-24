@@ -23,7 +23,7 @@ class Solution:
                     return False
                 else:
                     queue.append(node.right)
-            elif not node.left: #node.left is null
+            elif not node.right: #node.left is null
                 null_starting_point = True
         return True 
 

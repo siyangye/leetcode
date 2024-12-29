@@ -8,7 +8,7 @@ class Solution:
                 if curr == "..":
                     if stack:
                         stack.pop()
-                    curr = ""
+                    curr = "" #别忘记变量重置！
                 elif curr == ".":
                     curr = ""
                 elif curr != "":

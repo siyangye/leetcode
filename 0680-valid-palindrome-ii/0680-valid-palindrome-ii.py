@@ -1,22 +1,25 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
-        def checkPanlindrome(s:str,l:int, r:int)-> bool:
-            while l <r:
-                if s[l] ==s[r]:
-                    l+=1
+        moves = 0
+        l=0
+        r = len(s)-1 #indexs l,r 
+        while l<r:
+            if s[l]==s[r]:
+                l+=1
+                r-=1
+            else:
+                #check if pop left or right will make it work 
+                if l+1 <= r and s[l+1]==s[r]:
+                    l+=2
                     r-=1
+                    moves +=1
+                    continue 
+                elif l <=r-1 and s[l]==s[r-1]:
+                    l+=1
+                    r-=2
+                    moves+=1
                 else:
-                    return False
-            return True
-
-        if s == s[::-1]:
-            return True
-        else:
-            l,r = 0, len(s)-1
-            while l <r:
-                if s[l]==s[r]:
-                    l+=1
-                    r-=1
-                else: return (checkPanlindrome(s,l+1,r))or (checkPanlindrome(s,l,r-1))
-    
-        
+                    return False 
+            if moves > 1:
+                return False
+        return True

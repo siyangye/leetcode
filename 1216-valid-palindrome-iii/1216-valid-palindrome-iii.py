@@ -1,5 +1,6 @@
 class Solution:
     def isValidPalindrome(self, s: str, k: int) -> bool:
+        @cache
         def helper(left: int, right: int, k: int) -> bool:
             # 基本情况
             if k < 0:  # 删除次数用完

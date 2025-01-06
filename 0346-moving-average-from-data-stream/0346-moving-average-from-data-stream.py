@@ -1,3 +1,4 @@
+#use list: runtime:O(n)cuz each list.pop(0)require moving rest of the elements in the list; space compelxity:O(size) 
 class MovingAverage:
     def __init__(self, size: int):
         self.size = size

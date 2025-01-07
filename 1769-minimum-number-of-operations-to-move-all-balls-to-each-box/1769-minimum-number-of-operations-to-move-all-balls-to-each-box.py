@@ -1,26 +1,22 @@
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
-        res = [0]*len(boxes)
-
-        count_ones =0
-        accumulated_moves = 0
-
-        for i in range(len(boxes)):#[0],c=1,acumu=1,[1],c=2,[3]
-            res[i]+= accumulated_moves
-            # print(accumulated_moves)
-            if boxes[i]=='1':
-                count_ones +=1
-            accumulated_moves += count_ones
-            # print(accumulated_moves)
-        print(res)
-        left_count_ones =0
-        left_accumulated_moves = 0
-        n=len(boxes)
-        for i in range(n-1,-1,-1):
-            res[i]+= left_accumulated_moves
-            if boxes[i]=='1':
-                left_count_ones +=1
-            left_accumulated_moves += left_count_ones
-                # print(left_accumulated_moves)
-        print(res)
-        return res 
+        n = len(boxes)
+        result = [0] * n
+        
+        # 计算左边小球的影响
+        count = 0  # 左边小球的数量
+        operations = 0  # 累计操作数
+        for i in range(n):
+            result[i] += operations
+            count += int(boxes[i])
+            operations += count  # 更新操作数
+        
+        # 计算右边小球的影响
+        count = 0  # 重置为右边小球的数量
+        operations = 0  # 重置累计操作数
+        for i in range(n-1, -1, -1):
+            result[i] += operations
+            count += int(boxes[i])
+            operations += count  # 更新操作数
+        
+        return result

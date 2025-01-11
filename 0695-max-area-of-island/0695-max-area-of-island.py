@@ -7,9 +7,9 @@ class Solution:
                 area = 1
                 for inc_r,inc_c in directions:#loop
                     area += dfs(inc_r+r,inc_c+c)
+                return area
             else:
                 return 0
-            return area
         res = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):

@@ -11,33 +11,24 @@ class Solution:
     def treeToDoublyList(self, root: 'Optional[Node]') -> 'Optional[Node]':
         if not root:
             return None
-        last = None
         first = None
-        def inOrder(node):#this is a recursive function
-            nonlocal last,first #this is the pointer for the linked list, not for recursive
-            #base case 
+        last = None
+        def helper(node):
+            nonlocal first,last
             if not node:
-                return 
-            #recursive case
-            #first, process left child node:
-            inOrder(node.left)
-            #then process current node:
+                return True
+            #recursive
+            helper(node.left)
             if not first:
                 first = node
-                last = node 
+                last = node
             else:
                 last.right = node
                 node.left = last
-                last = node 
-            #lastly, process right child node:
-            inOrder(node.right)
-        #by the end of the entire recursive, I need to close the circle by connecting first and last node: 
-        inOrder(root)
+                last = node
+            helper(node.right)
+        helper(root)
         first.left = last
-        last.right = first 
+        last.right = first
         return first
-        
-
-
-
         

@@ -13,10 +13,12 @@ class Solution:
             return None
         last = None
         first = None
-        def inOrder(node):
-            nonlocal last,first
+        def inOrder(node):#this is a recursive function
+            nonlocal last,first #this is the pointer for the linked list, not for recursive
+            #base case 
             if not node:
                 return 
+            #recursive case
             #first, process left child node:
             inOrder(node.left)
             #then process current node:

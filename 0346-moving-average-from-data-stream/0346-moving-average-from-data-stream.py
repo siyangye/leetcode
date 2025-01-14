@@ -1,17 +1,16 @@
-#use deque :runtime complexity: O(1)
 class MovingAverage:
 
     def __init__(self, size: int):
+        self.queue=deque()
         self.size = size
-        self.list = deque()
-        self.sums = 0
 
     def next(self, val: int) -> float:
-        self.list.append(val)
-        self.sums += val
-        if len(self.list)> self.size:
-            self.sums-=self.list.popleft()
-        return self.sums/len(self.list)
+        self.queue.append(val)
+        if len(self.queue)<=self.size:
+            return sum(self.queue)/len(self.queue)
+        else:
+            self.queue.popleft()
+            return sum(self.queue)/len(self.queue)
         
 
 

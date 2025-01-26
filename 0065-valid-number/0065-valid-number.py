@@ -1,37 +1,38 @@
 class Solution:
     def isNumber(self, s: str) -> bool:
-        def is_valid_int(s:str):
-            seen_num = False
+        def valid_int(s:str):
             if not s:
                 return False
-            i=0
+            seen_num = False
+            i = 0
             if s[i] in ['+','-']:
                 i+=1
-            while i<len(s):
+            while i <len(s):
                 if s[i].isdigit():
                     i+=1
                     seen_num = True
                 else:
                     return False
             return seen_num
-
+        seen_dot = False
         seen_num = False
-        count_dot = 0
-        count_e = 0
-        i=0
+        i = 0
         if s[i] in ['+','-']:
-            i+= 1
+            i+=1
         while i < len(s):
-            if s[i]=='.':
-                count_dot += 1
-                print(count_dot)
-            elif s[i] in ['e','E']:
-                count_e +=1
-                return count_dot <=1 and seen_num and is_valid_int(s[i+1:])
+            if s[i].isalpha():
+                if s[i] not in ['e','E']:
+                    return False
+                else:
+                    return seen_num and valid_int(s[i+1:])
+            elif s[i] in ['+','-']:
+                return False
+            elif s[i]=='.':
+                if not seen_dot:
+                    seen_dot = True
+                else:
+                    return False
             elif s[i].isdigit():
                 seen_num = True
-            else:
-                return False
             i+=1
-        print(count_dot)
-        return count_dot <=1 and count_e <=1 and seen_num
+        return seen_num

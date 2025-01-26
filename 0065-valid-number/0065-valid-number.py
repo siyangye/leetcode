@@ -24,12 +24,14 @@ class Solution:
         while i < len(s):
             if s[i]=='.':
                 count_dot += 1
+                print(count_dot)
             elif s[i] in ['e','E']:
                 count_e +=1
-                return seen_num and is_valid_int(s[i+1:])
+                return count_dot <=1 and seen_num and is_valid_int(s[i+1:])
             elif s[i].isdigit():
                 seen_num = True
             else:
                 return False
             i+=1
+        print(count_dot)
         return count_dot <=1 and count_e <=1 and seen_num

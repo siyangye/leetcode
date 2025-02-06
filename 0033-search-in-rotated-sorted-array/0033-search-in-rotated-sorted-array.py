@@ -1,27 +1,19 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        if not nums:
-            return -1
-            
-        left, right = 0, len(nums) - 1
-        
-        while left <= right:
-            mid = (left + right) // 2
+        l = 0
+        r = len(nums) - 1
+        while l <= r:
+            mid = (l + r) //2
             if nums[mid] == target:
                 return mid
-                
-            # 判断左半部分是否有序
-            if nums[left] <= nums[mid]:
-                # 如果target在左半部分的范围内
-                if nums[left] <= target < nums[mid]:
-                    right = mid - 1  # 往左找
+            elif nums[l] <= nums[mid]: #左边是有序的
+                if nums[l] <= target < nums[mid]:
+                    r = mid -1
                 else:
-                    left = mid + 1   # 往右找
-            # 右半部分有序
+                    l = mid + 1
             else:
-                # 如果target在右半部分的范围内
-                if nums[mid] < target <= nums[right]:
-                    left = mid + 1   # 往右找
+                if nums[mid] < target <= nums[r]:
+                    l = mid + 1
                 else:
-                    right = mid - 1  # 往左找
-        return -1
+                    r = mid - 1
+        return -1 

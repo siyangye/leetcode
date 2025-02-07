@@ -15,8 +15,7 @@ class Solution:
             for x,y in directions:
                 new_row = x + r
                 new_col = y + c
-                if 0 <= new_row < row and 0 <=new_col < col:
-                    if dist[new_row][new_col] > dist[r][c] + 1:
+                if 0 <= new_row < row and 0 <=new_col < col and dist[new_row][new_col] == float('inf'):
                         dist[new_row][new_col] = dist[r][c] + 1
                         queue.append((new_row, new_col))
         return dist

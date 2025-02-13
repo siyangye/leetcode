@@ -15,9 +15,7 @@ class Solution:
             #recursive
             l = height(curr.left)
             r = height(curr.right)
-            if l == -1 or r == -1:
-                return -1
-            elif abs(l - r) > 1:
+            if abs(l -r) > 1 or l == -1 or r == -1: #return -1 if there is a unbalanced child tree
                 return -1
             #else
             return max(l, r) + 1

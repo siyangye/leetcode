@@ -8,13 +8,15 @@ class Solution:
         if not head:
             return
         curr = head
-        prev = None #what does that even mean? is it a listnode? 
+        prev = None #null pointer 
         while curr:
             temp = curr.next
             curr.next = prev
             prev = curr
             curr = temp
         return prev
+    #runtime: O(n)
+    #space: O（1）
 
 
         

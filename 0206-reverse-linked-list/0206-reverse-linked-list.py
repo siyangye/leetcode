@@ -16,7 +16,7 @@ class Solution:
         while s:
             end.next = s.pop()
             end = end.next
-            end.next = None
+            end.next = None #这个地方很容易错！这样才能打破旧的next pointer关系！
         return current.next
 
 

@@ -1,20 +1,18 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        def updateStr(s:str) ->str:
-            res = ""
-            i = 0
-            while i < len(s):
-                if s[i].isalnum():
-                    res += s[i].lower()  # Fixed: added = for concatenation
-                i += 1
-            return res
-        
-        letterOnlyStr = updateStr(s)
-        print(letterOnlyStr)   # Now this will work
-        m, n = 0, len(letterOnlyStr)-1
-        while m < n:
-            if letterOnlyStr[m] != letterOnlyStr[n]:
+        l = 0
+        r = len(s) - 1
+        while l < r:
+            if not s[l].isalnum(): #if this is still not alnum, we should keep looping 
+                l += 1
+                continue #this will make sure we loop till l point to alnum. 
+            if not s[r].isalnum():
+                r -= 1
+                continue
+            if s[l].lower() == s[r].lower():
+                l += 1
+                r -= 1
+            else:
                 return False
-            m += 1
-            n -= 1
         return True
+            

@@ -10,8 +10,8 @@ class Solution:
                     baskets[j] = 0
                     placed = True
                     break
-            
-            if not placed:
+        for j in range(n):
+            if baskets[j] != 0:
                 count += 1
         
         return count

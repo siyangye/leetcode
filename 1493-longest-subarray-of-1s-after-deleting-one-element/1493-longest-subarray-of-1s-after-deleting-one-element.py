@@ -11,9 +11,9 @@ class Solution:
                 curr_len += 1
             elif nums[i] == 0 and deleteBi:
                 max_len = max(max_len, curr_len)
-                print(max_len) #3,5
+                # print(max_len) #3,5
                 curr_len = i - zero_pos - 1
-                print(curr_len)#3, 6
+                # print(curr_len)#3, 6
                 zero_pos = i
         max_len = max(max_len, curr_len)
         if not deleteBi:

@@ -1,3 +1,4 @@
+#我想的办法：在flowerbed最前面/最后加0, 计算整个数组的1之间有多少0,当连续有3个0的时候，可以添加一个1。
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         bed = [0] + flowerbed + [0]
